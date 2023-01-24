@@ -1,0 +1,20 @@
+include ./kitty-themes/themes/Dracula.conf
+
+font_family Cascadia Code PL
+font_size 11.0
+disable_ligatures never
+
+cursor_shape block
+
+enable_audio_bell no
+
+tab_bar_style powerline
+tab_powerline_style slanted
+
+remember_window_size yes
+
+
+# BEGIN_KITTY_THEME
+# GitHub Dark
+include current-theme.conf
+# END_KITTY_THEME

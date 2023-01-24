@@ -1,0 +1,10 @@
+[user]
+	name = Osama Adam
+	email = osamaadamme@gmail.com
+	signingkey = ~/.ssh/git_sign_key.pub
+[core]
+	editor = nvim
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
