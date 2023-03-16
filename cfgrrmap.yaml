@@ -1,90 +1,120 @@
 1c8d2ae5:
     path: .config/nvim/after/plugin/gitsigns.lua
     perm: 420
+    browsable: true
 3b95cbca:
     path: .config/nvim/after/plugin/telescope.lua
     perm: 420
+    browsable: true
 4edb8200:
     path: .config/fish/fish_variables
     perm: 420
+    browsable: true
 9f5d3b87:
     path: .config/nvim/after/plugin/toggleterm.lua
     perm: 420
+    browsable: true
 9f633cb9:
     path: .config/kitty/kitty.conf
     perm: 420
+    browsable: true
 10b7b7d8:
     path: .config/nvim/lua/plugins.lua
     perm: 420
+    browsable: true
 10ca7aa9:
     path: .config/kitty/kitty.conf.bak
     perm: 420
+    browsable: true
 17c8c701:
     path: .vim/plugins.vimrc
     perm: 420
+    browsable: true
 22ec5e74:
     path: .config/nvim/after/plugin/formatter.lua
     perm: 420
+    browsable: true
 22fb18b0:
     path: .config/nvim/after/plugin/neotree.lua
     perm: 420
+    browsable: true
 36fb0811:
     path: .config/fish/functions/fish_prompt.fish
     perm: 420
+    browsable: true
 74b8f040:
     path: .config/nvim/after/plugin/nerdcommenter.lua
     perm: 420
+    browsable: true
 90fdc7e7:
     path: .config/nvim/lua/config.lua
     perm: 420
+    browsable: true
 538daed5:
     path: .config/nvim/after/plugin/lsp.lua
     perm: 420
+    browsable: true
 568a5030:
     path: .vim/.coc.vimrc
     perm: 420
+    browsable: true
 583a948a:
     path: .config/fish/config.fish
     perm: 420
+    browsable: true
 6342f658:
     path: .config/nvim/init.lua
     perm: 420
+    browsable: true
 50702f82:
     path: .config/nvim/lua/remaps.lua
     perm: 420
+    browsable: true
 53959f46:
     path: .config/nvim/after/plugin/treesitter.lua
     perm: 420
+    browsable: true
 93946c12:
     path: .vimrc
     perm: 420
+    browsable: true
 407439a5:
     path: .bashrc
     perm: 420
+    browsable: true
 a51f78a0:
     path: .config/nvim/lua/theme.lua
     perm: 420
+    browsable: true
 ad25a756:
     path: .gitconfig
     perm: 420
+    browsable: true
 bea69203:
     path: .config/nvim/stylua.toml
     perm: 420
+    browsable: true
 c00ca01c:
     path: .vim/formatter.lua
     perm: 420
+    browsable: true
 cee88a4b:
     path: .zshrc
     perm: 420
+    browsable: true
 e56c110d:
     path: .config/nvim/after/plugin/lualine.lua
     perm: 420
+    browsable: true
 e38129ee:
     path: .bash_profile
     perm: 420
+    browsable: true
 f09a6d41:
     path: .config/kitty/current-theme.conf
     perm: 420
+    browsable: true
 f351e3fe:
     path: .config/nvim/coc-settings.json
     perm: 420
+    browsable: true
