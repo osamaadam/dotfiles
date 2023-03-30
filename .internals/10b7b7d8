@@ -23,15 +23,16 @@ return require("packer").startup({
     use("dracula/vim")
     use("akinsho/toggleterm.nvim")
     use("lewis6991/gitsigns.nvim")
+    use("tpope/vim-fugitive")
     use("nvim-lualine/lualine.nvim")
     use("nvim-tree/nvim-web-devicons")
     use("mhartington/formatter.nvim")
     use({ "catppuccin/nvim", as = "catppuccin" })
-    use({ 
+    use({
       "windwp/nvim-ts-autotag",
       config = function()
         require("nvim-ts-autotag").setup()
-      end
+      end,
     })
 
     use({
@@ -61,21 +62,7 @@ return require("packer").startup({
       cmd = "Copilot",
       event = "InsertEnter",
       config = function()
-        require("copilot").setup({
-          panel = { enabled = false },
-          suggestions = { enabled = false },
-        })
-      end,
-    })
-    use({
-      "zbirenbaum/copilot-cmp",
-      after = { "copilot.lua" },
-      config = function()
-        require("copilot_cmp").setup({
-          formatters = {
-            insert_text = require("copilot_cmp.format").remove_existing,
-          },
-        })
+        require("copilot").setup()
       end,
     })
 

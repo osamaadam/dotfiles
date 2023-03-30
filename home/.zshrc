@@ -112,6 +112,8 @@ alias c="clear"
 alias so="source $HOME/.zshrc"
 alias rail="rails"
 alias v="nvim"
+alias update="sudo apt update"
+alias upgrade="sudo apt full-upgrade -y"
 
 export EDITOR="nvim"
 export VISUAL="nvim"

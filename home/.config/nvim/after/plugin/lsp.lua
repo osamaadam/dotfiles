@@ -12,10 +12,6 @@ lsp.setup()
 local cmp = require("cmp")
 
 local config = cmp.get_config()
-table.insert(config.sources, {
-  name = "copilot",
-  group_index = 2,
-})
 
 config.mapping = {
   -- toggle completion menu
