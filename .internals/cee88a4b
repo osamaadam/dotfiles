@@ -1,10 +1,32 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$HOME/go/bin/:$HOME/.local/bin/:$PATH
 PATH=/usr/local/lib/node_modules/node/bin:$PATH
+PATH=$HOME/.local/bin:$PATH
+PATH=$HOME/go/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+znap_path="$HOME/.zsh/znap"
+
+# Download Znap, if it's not there yet.
+[[ -f ${znap_path}/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git $znap_path
+
+source ${znap_path}/znap.zsh # Start Znap
+
+# `znap source` automatically downloads and starts your plugins.
+znap source marlonrichert/zsh-autocomplete
+znap source zsh-users/zsh-autosuggestions
+znap source zsh-users/zsh-syntax-highlighting
+znap source laggardkernel/zsh-thefuck
+
+# `znap eval` caches and runs any kind of command output for you.
+znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
+
+# `znap function` lets you lazy-load features you don't always need.
+znap function _pyenv pyenv 'eval "$( pyenv init - --no-rehash )"'
+compctl -K    _pyenv pyenv
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -72,14 +94,6 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  colored-man-pages
-  themes
-  thefuck
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,6 +126,7 @@ alias c="clear"
 alias so="source $HOME/.zshrc"
 alias rail="rails"
 alias v="nvim"
+alias v.="nvim ."
 alias update="sudo apt update"
 alias upgrade="sudo apt full-upgrade -y"
 
@@ -129,3 +144,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PNPM_HOME="/home/adam/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

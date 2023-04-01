@@ -28,6 +28,15 @@ return require("packer").startup({
     use("nvim-tree/nvim-web-devicons")
     use("mhartington/formatter.nvim")
     use({ "catppuccin/nvim", as = "catppuccin" })
+    use("fladson/vim-kitty")
+    use({
+      "iamcco/markdown-preview.nvim",
+      run = "cd app && npm install",
+      setup = function()
+        vim.g.mkdp_filetypes = { "markdown" }
+      end,
+      ft = { "markdown" },
+    })
     use({
       "windwp/nvim-ts-autotag",
       config = function()
@@ -42,7 +51,7 @@ return require("packer").startup({
     })
     use({
       "nvim-treesitter/nvim-treesitter",
-      { run = ":TSUpdate" },
+      run = ":TSUpdate",
     })
 
     -- neo-tree
@@ -56,13 +65,20 @@ return require("packer").startup({
       },
     })
 
-    -- Copilot land
+    -- Copilot
     use({
       "zbirenbaum/copilot.lua",
       cmd = "Copilot",
       event = "InsertEnter",
       config = function()
-        require("copilot").setup()
+        require("copilot").setup({
+          suggestion = {
+            auto_trigger = true,
+          },
+          filetypes = {
+            ["*"] = true,
+          },
+        })
       end,
     })
 

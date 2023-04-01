@@ -22,10 +22,6 @@
     path: .config/nvim/lua/plugins.lua
     perm: 420
     browsable: true
-10ca7aa9:
-    path: .config/kitty/kitty.conf.bak
-    perm: 420
-    browsable: true
 17c8c701:
     path: .vim/plugins.vimrc
     perm: 420
@@ -49,6 +45,10 @@
 90fdc7e7:
     path: .config/nvim/lua/config.lua
     perm: 420
+    browsable: true
+284f5ccc:
+    path: .config/kitty/theme.conf
+    perm: 436
     browsable: true
 538daed5:
     path: .config/nvim/after/plugin/lsp.lua
@@ -108,10 +108,6 @@ e56c110d:
     browsable: true
 e38129ee:
     path: .bash_profile
-    perm: 420
-    browsable: true
-f09a6d41:
-    path: .config/kitty/current-theme.conf
     perm: 420
     browsable: true
 f351e3fe:
