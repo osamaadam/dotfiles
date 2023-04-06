@@ -1,7 +1,7 @@
 require("lualine").setup({
   options = {
-    theme = "catppuccin",
+    theme = "auto",
     icons_enabled = true,
   },
-  extensions = { "neo-tree", "toggleterm", "man" },
+  extensions = { "fugitive", "neo-tree", "toggleterm", "man" },
 })

@@ -28,7 +28,9 @@ return require("packer").startup({
     use("nvim-tree/nvim-web-devicons")
     use("mhartington/formatter.nvim")
     use({ "catppuccin/nvim", as = "catppuccin" })
+    use("Shatur/neovim-ayu")
     use("fladson/vim-kitty")
+    use("b0o/SchemaStore.nvim")
     use({
       "iamcco/markdown-preview.nvim",
       run = "cd app && npm install",

@@ -11,7 +11,7 @@ require("toggleterm").setup({
   hide_numbers = true,
   shade_filetypes = {},
   start_in_insert = true,
-  persist_size = true,
+  persist_size = false,
   direction = "float",
   close_on_exit = true,
   shell = vim.o.shell,
@@ -20,3 +20,6 @@ require("toggleterm").setup({
     border = "curved",
   },
 })
+
+-- Normal mode in terminal.
+vim.keymap.set("t", "jk", [[<C-\><C-n>]], { buffer = 0 })

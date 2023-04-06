@@ -1,4 +1,4 @@
-# If you come from bash you might have to change your $PATH.
+# Setting the paths.
 PATH=$HOME/go/bin/:$HOME/.local/bin/:$PATH
 PATH=/usr/local/lib/node_modules/node/bin:$PATH
 PATH=$HOME/.local/bin:$PATH
@@ -127,24 +127,24 @@ alias so="source $HOME/.zshrc"
 alias rail="rails"
 alias v="nvim"
 alias v.="nvim ."
+
+# Ubuntu aliases.
 alias update="sudo apt update"
 alias upgrade="sudo apt full-upgrade -y"
+alias install="sudo apt install -y"
+alias remove="sudo apt remove -y"
+alias purge="sudo apt purge -y"
+alias autoremove="sudo apt autoremove -y"
 
+# Setting editors.
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-# ssh startup
+# ssh startup.
 eval $(ssh-agent) 1>/dev/null
 ssh-add ~/.ssh/github 2>/dev/null
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# pnpm
-export PNPM_HOME="/home/adam/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
+# nvm
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
