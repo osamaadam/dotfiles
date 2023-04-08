@@ -2,6 +2,10 @@
     path: .config/nvim/after/plugin/gitsigns.lua
     perm: 420
     browsable: true
+2d779555:
+    path: .config/picom/picom.conf
+    perm: 436
+    browsable: true
 3b95cbca:
     path: .config/nvim/after/plugin/telescope.lua
     perm: 420
@@ -34,9 +38,17 @@
     path: .config/nvim/after/plugin/neotree.lua
     perm: 420
     browsable: true
+33e5c1c7:
+    path: .config/i3/config
+    perm: 436
+    browsable: true
 36fb0811:
     path: .config/fish/functions/fish_prompt.fish
     perm: 420
+    browsable: true
+50ddfa72:
+    path: .config/i3/i3status.conf
+    perm: 436
     browsable: true
 74b8f040:
     path: .config/nvim/after/plugin/nerdcommenter.lua

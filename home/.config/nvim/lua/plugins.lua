@@ -16,21 +16,15 @@ return require("packer").startup({
     use("wbthomason/packer.nvim")
     use("tpope/vim-surround")
     use("tpope/vim-sleuth")
-    use({ "tpope/vim-rails", ft = { "ruby", "eruby" } })
     use("scrooloose/nerdcommenter")
     use("raimondi/delimitmate")
     use("projekt0n/github-nvim-theme")
-    use("dracula/vim")
     use("akinsho/toggleterm.nvim")
     use("lewis6991/gitsigns.nvim")
     use("tpope/vim-fugitive")
     use("nvim-lualine/lualine.nvim")
-    use("nvim-tree/nvim-web-devicons")
     use("mhartington/formatter.nvim")
-    use({ "catppuccin/nvim", as = "catppuccin" })
-    use("Shatur/neovim-ayu")
     use("fladson/vim-kitty")
-    use("b0o/SchemaStore.nvim")
     use({
       "iamcco/markdown-preview.nvim",
       run = "cd app && npm install",
@@ -43,6 +37,18 @@ return require("packer").startup({
       "windwp/nvim-ts-autotag",
       config = function()
         require("nvim-ts-autotag").setup()
+      end,
+    })
+    use({
+      "RRethy/vim-illuminate",
+      config = function()
+        require("illuminate").configure({
+          providers = {
+            "lsp",
+            "treesitter",
+          },
+          delay = 200,
+        })
       end,
     })
 

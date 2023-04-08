@@ -1,6 +1,7 @@
 require("remaps")
 require("theme")
 require("config")
+require("plugins")
 
 vim.cmd([[filetype plugin on]])
 vim.api.nvim_set_option("encoding", "UTF8")
