@@ -10,3 +10,10 @@
 	gpgsign = true
 [tag]
 	gpgSign = true
+[maintenance]
+	repo = /home/adam/.zsh/znap
+	repo = /home/adam/.zsh/zsh-autosuggestions
+	repo = /home/adam/.zsh/zsh-syntax-highlighting
+	repo = /home/adam/.zsh/zsh-thefuck
+	repo = /home/adam/.zsh/zsh-autocomplete
+	repo = /home/adam/.zsh/ohmyzsh

@@ -1,11 +1,10 @@
 # Setting the paths.
-PATH=$HOME/go/bin/:$HOME/.local/bin/:$PATH
 PATH=/usr/local/lib/node_modules/node/bin:$PATH
 PATH=$HOME/.local/bin:$PATH
 PATH=$HOME/go/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.zsh/ohmyzsh"
 znap_path="$HOME/.zsh/znap"
 
 # Download Znap, if it's not there yet.
@@ -16,10 +15,13 @@ znap_path="$HOME/.zsh/znap"
 source ${znap_path}/znap.zsh # Start Znap
 
 # `znap source` automatically downloads and starts your plugins.
+znap source ohmyzsh/ohmyzsh
 znap source marlonrichert/zsh-autocomplete
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
 znap source laggardkernel/zsh-thefuck
+
+source $HOME/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # `znap eval` caches and runs any kind of command output for you.
 znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'

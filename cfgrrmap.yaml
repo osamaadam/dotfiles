@@ -122,7 +122,3 @@ e38129ee:
     path: .bash_profile
     perm: 420
     browsable: true
-f351e3fe:
-    path: .config/nvim/coc-settings.json
-    perm: 420
-    browsable: true
