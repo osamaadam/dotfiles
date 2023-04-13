@@ -18,13 +18,25 @@ return require("packer").startup({
     use("tpope/vim-sleuth")
     use("scrooloose/nerdcommenter")
     use("raimondi/delimitmate")
-    use("projekt0n/github-nvim-theme")
     use("akinsho/toggleterm.nvim")
     use("lewis6991/gitsigns.nvim")
     use("tpope/vim-fugitive")
     use("nvim-lualine/lualine.nvim")
     use("mhartington/formatter.nvim")
     use("fladson/vim-kitty")
+    use({
+      "catppuccin/nvim",
+      as = "catppuccin",
+      config = function()
+        require("catppuccin").setup({
+          integrations = {
+            cmp = true,
+            gitsigns = true,
+            telescope = true,
+          },
+        })
+      end,
+    })
     use({
       "iamcco/markdown-preview.nvim",
       run = "cd app && npm install",
@@ -82,6 +94,9 @@ return require("packer").startup({
         require("copilot").setup({
           suggestion = {
             auto_trigger = true,
+            keymap = {
+              accept = "<C-w>",
+            },
           },
           filetypes = {
             ["*"] = true,
