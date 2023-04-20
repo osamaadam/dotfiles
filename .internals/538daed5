@@ -13,6 +13,21 @@ local cmp = require("cmp")
 
 local config = cmp.get_config()
 
+config.formatting = {
+  format = function(entry, vim_item)
+    -- fancy icons and a name of kind
+    vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
+
+    -- set a name for each source
+    vim_item.menu = ({
+      nvim_lsp = "[LSP]",
+      nvim_lua = "[Lua]",
+      buffer = "[Buffer]",
+    })[entry.source.name]
+    return vim_item
+  end,
+}
+
 config.mapping = {
   -- toggle completion menu
   ["<C-e>"] = cmp.mapping(function(fallback)
@@ -36,6 +51,9 @@ config.mapping = {
     "i",
     "s",
   }),
+  -- scroll docs
+  ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+  ["<C-f>"] = cmp.mapping.scroll_docs(4),
 }
 
 cmp.setup(config)

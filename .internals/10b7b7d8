@@ -16,7 +16,6 @@ return require("packer").startup({
     use("wbthomason/packer.nvim")
     use("tpope/vim-surround")
     use("tpope/vim-sleuth")
-    use("scrooloose/nerdcommenter")
     use("raimondi/delimitmate")
     use("akinsho/toggleterm.nvim")
     use("lewis6991/gitsigns.nvim")
@@ -24,6 +23,24 @@ return require("packer").startup({
     use("nvim-lualine/lualine.nvim")
     use("mhartington/formatter.nvim")
     use("fladson/vim-kitty")
+    use("folke/todo-comments.nvim")
+    use({
+      "numToStr/Comment.nvim",
+      config = function()
+        require("Comment").setup({
+          toggler = {
+            line = "<C-_>",
+          },
+          opleader = {
+            line = "<C-_>",
+          },
+          mappings = {
+            basic = false,
+            extra = false,
+          }
+        })
+      end,
+    })
     use({
       "catppuccin/nvim",
       as = "catppuccin",
@@ -122,6 +139,7 @@ return require("packer").startup({
         { "hrsh7th/cmp-buffer" }, -- Optional
         { "hrsh7th/cmp-path" }, -- Optional
         { "saadparwaiz1/cmp_luasnip" }, -- Optional
+        { "onsails/lspkind.nvim" },
 
         -- Snippets
         { "L3MON4D3/LuaSnip" }, -- Required
