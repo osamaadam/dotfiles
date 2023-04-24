@@ -66,7 +66,12 @@ vim.diagnostic.config({
 })
 
 -- show diagnostics in a floating window
-vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, { noremap = true, silent = true })
+vim.keymap.set(
+  "n",
+  "<leader>ld",
+  vim.diagnostic.open_float,
+  { noremap = true, silent = true, desc = "Show diagnostics" }
+)
 -- toggle virtual_text on <leader>t
 local toggle_virtual_text = function()
   if vim.diagnostic.config().virtual_text then
@@ -76,14 +81,19 @@ local toggle_virtual_text = function()
   end
 end
 
-local opts = { noremap = true, silent = true }
-
-vim.keymap.set("n", "<leader>lt", toggle_virtual_text, opts)
--- show signature on <leader>s
-vim.keymap.set("n", "<leader>ls", vim.lsp.buf.hover, opts)
--- go to next error on <leader>le
-vim.keymap.set("n", "<leader>le", vim.diagnostic.goto_next, opts)
--- lsp code action
-vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, opts)
--- lsp rename
-vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
+vim.keymap.set("n", "<leader>lt", toggle_virtual_text, { noremap = true, silent = true, desc = "Toggle virtual text" })
+vim.keymap.set("n", "<leader>ls", vim.lsp.buf.hover, { noremap = true, silent = true, desc = "Show hover" })
+vim.keymap.set(
+  "n",
+  "<leader>le",
+  vim.diagnostic.goto_next,
+  { noremap = true, silent = true, desc = "Go to next diagnostic" }
+)
+vim.keymap.set(
+  "n",
+  "<leader>lE",
+  vim.diagnostic.goto_prev,
+  { noremap = true, silent = true, desc = "Go to previous diagnostic" }
+)
+vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { noremap = true, silent = true, desc = "Code action" })
+vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { noremap = true, silent = true, desc = "Rename" })

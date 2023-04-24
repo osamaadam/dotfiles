@@ -37,7 +37,7 @@ return require("packer").startup({
           mappings = {
             basic = false,
             extra = false,
-          }
+          },
         })
       end,
     })
@@ -78,6 +78,14 @@ return require("packer").startup({
           },
           delay = 200,
         })
+      end,
+    })
+    use({
+      "folke/which-key.nvim",
+      config = function()
+        vim.o.timeout = true
+        vim.o.timeoutlen = 300
+        require("which-key").setup()
       end,
     })
 

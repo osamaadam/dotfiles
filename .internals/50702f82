@@ -38,8 +38,8 @@ map("n", "<A-k>", "<C-w>K", opts)
 map("n", "<A-l>", "<C-w>L", opts)
 
 -- window splitting
-map("n", "<leader>sl", ":vsplit<CR><C-w>l", opts)
-map("n", "<leader>sj", ":split<CR><C-w>j", opts)
+map("n", "<leader>sl", ":vsplit<CR><C-w>l", { noremap = true, silent = true, desc = "split right" })
+map("n", "<leader>sj", ":split<CR><C-w>j", { noremap = true, silent = true, desc = "split down" })
 
 -- window resizing
 map("n", "<C-Up>", ":resize -2<CR>", opts)

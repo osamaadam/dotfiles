@@ -8,7 +8,12 @@ vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl = "DiagnosticSig
 -- NOTE: this is changed from v1.x, which used the old style of highlight groups
 -- in the form "LspDiagnosticsSignWarning"
 
-vim.api.nvim_set_keymap("n", "<C-b>", ":Neotree toggle show reveal<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  "n",
+  "<C-b>",
+  ":Neotree toggle show reveal<CR>",
+  { noremap = true, silent = true, desc = "Toggle NeoTree" }
+)
 
 require("neo-tree").setup({
   close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
