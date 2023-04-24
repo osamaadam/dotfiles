@@ -34,25 +34,12 @@ return require("packer").startup({
           opleader = {
             line = "<C-_>",
           },
-          mappings = {
-            basic = false,
-            extra = false,
-          },
         })
       end,
     })
     use({
       "catppuccin/nvim",
       as = "catppuccin",
-      config = function()
-        require("catppuccin").setup({
-          integrations = {
-            cmp = true,
-            gitsigns = true,
-            telescope = true,
-          },
-        })
-      end,
     })
     use({
       "iamcco/markdown-preview.nvim",
@@ -76,7 +63,7 @@ return require("packer").startup({
             "lsp",
             "treesitter",
           },
-          delay = 200,
+          delay = 100,
         })
       end,
     })

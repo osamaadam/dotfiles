@@ -27,6 +27,8 @@ local opts = {
   list = true,
   -- show cursor line
   cursorline = true,
+  -- timoutlen for keymaps
+  timeoutlen = 1000,
 }
 
 for k, v in pairs(opts) do
