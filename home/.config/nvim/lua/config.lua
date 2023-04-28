@@ -23,7 +23,7 @@ local opts = {
   -- system clipboard
   clipboard = "unnamedplus",
   -- render whitespace
-  listchars = "tab:»·,trail:·,nbsp:·",
+  -- listchars = "tab:»·,trail:·,nbsp:·",
   list = true,
   -- show cursor line
   cursorline = true,

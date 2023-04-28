@@ -25,6 +25,15 @@ return require("packer").startup({
     use("fladson/vim-kitty")
     use("folke/todo-comments.nvim")
     use({
+      "lukas-reineke/indent-blankline.nvim",
+      config = function()
+        require("indent_blankline").setup({
+          show_current_context = true,
+          space_char_blankline = " ",
+        })
+      end,
+    })
+    use({
       "numToStr/Comment.nvim",
       config = function()
         require("Comment").setup({
@@ -146,7 +155,9 @@ return require("packer").startup({
       require("packer").sync()
     end
   end,
-  config = { display = {
-    open_fn = require("packer.util").float,
-  } },
+  config = {
+    display = {
+      open_fn = require("packer.util").float,
+    },
+  },
 })

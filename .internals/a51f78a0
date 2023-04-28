@@ -8,7 +8,7 @@ require("catppuccin").setup({
   show_end_of_buffer = false, -- show the '~' characters after the end of buffers
   term_colors = false,
   dim_inactive = {
-    enabled = true,
+    enabled = false,
     shade = "dark",
     percentage = 0.15,
   },
@@ -29,25 +29,26 @@ require("catppuccin").setup({
     operators = {},
   },
   color_overrides = {},
+  custom_highlights = function(colors)
+    return {
+      CursorLine = { bg = colors.mantle },
+      CursorLineNr = { bg = colors.mantle },
+    }
+  end,
   integrations = {
     cmp = true,
     gitsigns = true,
     telescope = true,
     illuminate = true,
     mason = true,
-    cmp = true,
     neotree = true,
     which_key = true,
+    indent_blankline = {
+      enabled = true,
+      colored_indent_levels = false,
+    },
   },
 })
 
 -- setup must be called before loading
 vim.cmd.colorscheme("catppuccin")
-
--- function _G.TransparentBackground()
---   vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
---   vim.cmd("hi IlluminatedWordRead guibg=#3a3a3a gui=NONE")
--- end
---
--- TransparentBackground()

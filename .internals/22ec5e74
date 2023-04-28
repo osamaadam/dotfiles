@@ -39,12 +39,12 @@ require("formatter").setup({
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-map("n", "<leader>lf", ":Format<CR>", opts)
+-- map("n", "<leader>lf", ":Format<CR>", opts)
 
 -- format on save
-vim.cmd([[
-  augroup FormatAutogroup
-    autocmd! *
-    autocmd BufWritePost * FormatWrite
-  augroup END
-]])
+-- vim.cmd([[
+--   augroup FormatAutogroup
+--     autocmd! *
+--     autocmd BufWritePost * FormatWrite
+--   augroup END
+-- ]])
