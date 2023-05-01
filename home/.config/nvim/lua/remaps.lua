@@ -1,8 +1,10 @@
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+-- remove the annoying J mapping
+map("n", "J", "<nop>")
+
 -- map leader to space
-map("", "<space>", "<nop>", opts)
 vim.g.mapleader = " "
 
 -- stay in the middle
@@ -12,15 +14,13 @@ map("n", "G", "Gzz", opts)
 -- keep cursor in the middle of the screen
 map("n", "n", "nzzzv", opts)
 map("n", "N", "Nzzzv", opts)
-map("n", "J", "mzJ`z", opts)
 -- center the screen on new lines
 map("n", "o", "o<esc>zzcc", opts)
 map("n", "O", "O<esc>zzcc", opts)
 
 -- system clipboard
 -- requires the clipboard = "unnamedplus" option
-map("n", "<leader>y", '"+y', opts)
-map("v", "<leader>y", '"+y', opts)
+map({ "n", "v" }, "<leader>y", '"+y', opts)
 map("n", "<leader>Y", '"+Y', opts)
 
 -- keep clipboard

@@ -14,6 +14,10 @@
     path: .config/fish/fish_variables
     perm: 420
     browsable: true
+8f6ae7ba:
+    path: .config/nvim/after/plugin/lspkind.lua
+    perm: 420
+    browsable: true
 9f5d3b87:
     path: .config/nvim/after/plugin/toggleterm.lua
     perm: 420
@@ -28,10 +32,6 @@
     browsable: true
 17c8c701:
     path: .vim/plugins.vimrc
-    perm: 420
-    browsable: true
-22ec5e74:
-    path: .config/nvim/after/plugin/formatter.lua
     perm: 420
     browsable: true
 22fb18b0:

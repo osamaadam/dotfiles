@@ -93,4 +93,4 @@ local organize_imports = function()
   vim.lsp.buf.execute_command({ command = "_typescript.organizeImports", arguments = { vim.fn.expand("%:p") } })
 end
 
-vim.keymap.set({ "n", "v" }, "<leader>li", organize_imports, { desc = "Organize imports" })
+vim.keymap.set({ "n", "v" }, "<leader>li", organize_imports, { desc = "Organize imports (tsserver)" })
