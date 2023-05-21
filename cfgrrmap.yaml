@@ -34,6 +34,10 @@
     path: .vim/plugins.vimrc
     perm: 420
     browsable: true
+22ec5e74:
+    path: .config/nvim/after/plugin/formatter.lua
+    perm: 420
+    browsable: true
 22fb18b0:
     path: .config/nvim/after/plugin/neotree.lua
     perm: 420

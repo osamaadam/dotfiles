@@ -1,6 +1,6 @@
 [user]
 	name = Osama Adam
-	email = osamaadamme@gmail.com
+	email = osama.adam@saloodo.com
 	signingkey = ~/.ssh/git_sign_key.pub
 [core]
 	editor = nvim

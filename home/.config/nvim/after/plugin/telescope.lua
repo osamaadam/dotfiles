@@ -1,5 +1,6 @@
 require("telescope").setup({
   defaults = {
+    path_display = { "truncate" },
     vimgrep_arguments = {
       "rg",
       "--color=never",
@@ -8,10 +9,10 @@ require("telescope").setup({
       "--line-number",
       "--column",
       "--smart-case",
-      "--ignore-file",
-      ".gitignore",
       "-u",
       "-L",
+      -- "--ignore-file",
+      -- ".gitignore",
     },
     file_ignore_patterns = {
       "node_modules/",
@@ -21,12 +22,14 @@ require("telescope").setup({
       ".idea/",
       "dist/",
       "build/",
+      "vendor/",
     },
   },
   pickers = {
     find_files = {
       follow = true,
       hidden = true,
+      no_ignore = true,
     },
     git_status = {
       show_untracked = true,

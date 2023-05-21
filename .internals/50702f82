@@ -62,3 +62,6 @@ map("i", "<C-s>", "<Esc>:w<CR>a", opts)
 -- getting a little maccy I'm afraid
 map("n", "<C-q>", ":q<CR>", opts)
 map("i", "<C-q>", "<Esc>:q<CR>a", opts)
+
+-- normal mode in terminal with jk
+map("t", "jk", "<C-\\><C-n>", opts)

@@ -10,10 +10,6 @@ lsp.ensure_installed({
   "tsserver"
 })
 
-lsp.on_attach(function(client, bufnr)
-  lsp.buffer_autoformat()
-end)
-
 lsp.nvim_workspace()
 
 lsp.setup()
@@ -85,9 +81,6 @@ end
 vim.keymap.set("n", "<leader>lt", toggle_virtual_text, { desc = "Toggle virtual text", })
 vim.keymap.set("n", "<leader>ls", vim.lsp.buf.hover, { desc = "Show hover", })
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Code action", })
-vim.keymap.set({ "n", "v" }, "<leader>lf", function()
-  vim.lsp.buf.format({ async = false })
-end, { desc = "Format buffer" })
 
 local organize_imports = function()
   vim.lsp.buf.execute_command({ command = "_typescript.organizeImports", arguments = { vim.fn.expand("%:p") } })

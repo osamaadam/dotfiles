@@ -61,6 +61,7 @@ export VISUAL="nvim"
 # ssh startup.
 eval $(ssh-agent) &>/dev/null
 ssh-add ~/.ssh/github &>/dev/null
+ssh-add ~/.ssh/saloodo &>/dev/null
 
 # nvm
 export NVM_DIR="$HOME/.config/nvm"

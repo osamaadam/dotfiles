@@ -23,7 +23,13 @@ return require("packer").startup({
     use("nvim-lualine/lualine.nvim")
     use("mhartington/formatter.nvim")
     use("fladson/vim-kitty")
-    use("folke/todo-comments.nvim")
+    use({
+      "folke/todo-comments.nvim",
+      requires = "nvim-lua/plenary.nvim",
+      config = function()
+        require("todo-comments").setup()
+      end,
+    })
     use({
       "lukas-reineke/indent-blankline.nvim",
       config = function()
