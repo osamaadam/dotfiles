@@ -1,3 +1,5 @@
+local actions = require("telescope.actions")
+
 require("telescope").setup({
   defaults = {
     path_display = { "truncate" },
@@ -11,8 +13,8 @@ require("telescope").setup({
       "--smart-case",
       "-u",
       "-L",
-      -- "--ignore-file",
-      -- ".gitignore",
+      "--ignore-file",
+      ".gitignore",
     },
     file_ignore_patterns = {
       "node_modules/",
@@ -23,6 +25,16 @@ require("telescope").setup({
       "dist/",
       "build/",
       "vendor/",
+    },
+    mappings = {
+      n = {
+        ["s"] = actions.select_vertical,
+        ["S"] = actions.select_horizontal,
+        ["o"] = actions.select_default,
+      },
+      i = {
+        ["jk"] = { "<esc>", type = "command" },
+      },
     },
   },
   pickers = {

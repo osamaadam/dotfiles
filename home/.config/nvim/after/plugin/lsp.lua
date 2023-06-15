@@ -3,12 +3,15 @@ local lsp = require("lsp-zero").preset({
   name = "recommended",
   set_lsp_keymaps = {
     preserve_mappings = false,
-  }
+    omit = { "<C-k>" },
+  },
 })
 
 lsp.ensure_installed({
-  "tsserver"
+  "tsserver",
 })
+
+vim.keymap.set("n", "<leader>le", ":EslintFixAll<CR>", { desc = "Eslint fix", silent = true })
 
 lsp.nvim_workspace()
 
@@ -78,9 +81,9 @@ local toggle_virtual_text = function()
   end
 end
 
-vim.keymap.set("n", "<leader>lt", toggle_virtual_text, { desc = "Toggle virtual text", })
-vim.keymap.set("n", "<leader>ls", vim.lsp.buf.hover, { desc = "Show hover", })
-vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Code action", })
+vim.keymap.set("n", "<leader>lt", toggle_virtual_text, { desc = "Toggle virtual text" })
+vim.keymap.set("n", "<leader>ls", vim.lsp.buf.hover, { desc = "Show hover" })
+vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Code action" })
 
 local organize_imports = function()
   vim.lsp.buf.execute_command({ command = "_typescript.organizeImports", arguments = { vim.fn.expand("%:p") } })

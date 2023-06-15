@@ -20,7 +20,7 @@ local types_map = {
   graphql = { "graphql", "prettier" },
   yaml = { "yaml", "prettier" },
   json = { "json", "prettier" },
-  -- ["*"] = { "any", "remove_trailing_whitespace" },
+  ["*"] = { "any", "remove_trailing_whitespace" },
 }
 
 local filetype = {}
@@ -30,7 +30,7 @@ for file_type, v in pairs(types_map) do
   filetype[file_type] = filetype_default(lang, formatter)
 end
 
-filetype["*"] = { vim.lsp.buf.format }
+-- filetype["*"] = { vim.lsp.buf.format }
 
 require("formatter").setup({
   logging = true,
@@ -39,14 +39,14 @@ require("formatter").setup({
 })
 
 local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = true, desc = "Format" }
 
 map("n", "<leader>lf", ":Format<CR>", opts)
 
 -- format on save
--- vim.cmd([[
---   augroup FormatAutogroup
---     autocmd! *
---     autocmd BufWritePost * FormatWrite
---   augroup END
--- ]])
+vim.cmd([[
+  augroup FormatAutogroup
+    autocmd!
+    autocmd BufWritePost * FormatWrite
+  augroup END
+]])
