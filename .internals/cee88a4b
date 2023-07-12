@@ -5,7 +5,7 @@ PATH=$HOME/go/bin:$PATH
 PATH=$HOME/.cargo/bin/:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.zsh/ohmyzsh"
+export ZSH="$HOME/.zsh/ohmyzsh/ohmyzsh"
 export ZNAP="$HOME/.zsh/znap"
 
 # Download Znap, if it's not there yet.
@@ -22,7 +22,7 @@ znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
 znap source laggardkernel/zsh-thefuck
 
-source $HOME/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# source $HOME/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # `znap eval` caches and runs any kind of command output for you.
 znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'

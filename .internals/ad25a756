@@ -1,6 +1,6 @@
 [user]
 	name = Osama Adam
-	email = osama.adam@saloodo.com
+	email = osamaadam98@gmail.com
 	signingkey = ~/.ssh/git_sign_key.pub
 [core]
 	editor = nvim
@@ -10,3 +10,6 @@
 	gpgsign = true
 [tag]
 	gpgSign = true
+
+[includeIf "gitdir:~/git/"]
+	path = "~/.gitconfig-work"

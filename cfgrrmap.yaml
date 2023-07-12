@@ -82,6 +82,10 @@
     path: .config/nvim/init.lua
     perm: 420
     browsable: true
+6556ea4e:
+    path: .gitconfig-work
+    perm: 420
+    browsable: true
 50702f82:
     path: .config/nvim/lua/remaps.lua
     perm: 420
