@@ -41,6 +41,7 @@ alias so="source $HOME/.zshrc"
 alias rail="rails"
 alias v="nvim"
 alias v.="nvim ."
+alias awsl="aws --endpoint-url=http://localhost:4566"
 
 # Ubuntu aliases.
 alias update="sudo apt update"
@@ -67,3 +68,10 @@ ssh-add ~/.ssh/saloodo &>/dev/null
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/home/adam/.bun/_bun" ] && source "/home/adam/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
