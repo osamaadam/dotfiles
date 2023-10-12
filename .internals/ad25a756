@@ -13,3 +13,5 @@
 
 [includeIf "gitdir:~/git/"]
 	path = "~/.gitconfig-work"
+[alias]
+	l = log --oneline --graph --decorate
