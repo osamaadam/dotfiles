@@ -1,6 +1,9 @@
+[includeIf "gitdir:~/git/"]
+	path = "~/.gitconfig-work"
+
 [user]
 	name = Osama Adam
-	email = osamaadam98@gmail.com
+	email = osamaadamme@gmail.com
 	signingkey = ~/.ssh/git_sign_key.pub
 [core]
 	editor = nvim
@@ -10,8 +13,7 @@
 	gpgsign = true
 [tag]
 	gpgSign = true
-
-[includeIf "gitdir:~/git/"]
-	path = "~/.gitconfig-work"
 [alias]
 	l = log --oneline --graph --decorate
+[push]
+	default = current

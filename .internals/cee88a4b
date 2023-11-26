@@ -42,6 +42,7 @@ alias rail="rails"
 alias v="nvim"
 alias v.="nvim ."
 alias awsl="aws --endpoint-url=http://localhost:4566"
+alias cxml="sed -i -e 's/^.*\] //g' -e 's/u003c/\</g' -e 's/u003e/\>/g'"
 
 # Ubuntu aliases.
 alias update="sudo apt update"
