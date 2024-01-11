@@ -25,6 +25,7 @@ return require("packer").startup({
     use("fladson/vim-kitty")
     use("folke/todo-comments.nvim")
     use("lukas-reineke/indent-blankline.nvim")
+    use("eslint/eslint")
     use({
       "numToStr/Comment.nvim",
       config = function()

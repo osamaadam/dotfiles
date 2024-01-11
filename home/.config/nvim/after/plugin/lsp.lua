@@ -9,6 +9,7 @@ local lsp = require("lsp-zero").preset({
 
 lsp.ensure_installed({
   "tsserver",
+  "eslint",
 })
 
 vim.keymap.set("n", "<leader>le", ":EslintFixAll<CR>", { desc = "Eslint fix", silent = true })
