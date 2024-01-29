@@ -20,6 +20,7 @@ local types_map = {
   graphql = { "graphql", "prettier" },
   yaml = { "yaml", "prettier" },
   json = { "json", "prettier" },
+  sh = { "sh", "shfmt" },
   ["*"] = { "any", "remove_trailing_whitespace" },
 }
 
