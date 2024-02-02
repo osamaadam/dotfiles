@@ -1,3 +1,4 @@
+. ~/.profile
 # Setting the paths.
 PATH=/usr/local/lib/node_modules/node/bin:$PATH
 PATH=$HOME/.local/bin:$PATH
@@ -64,11 +65,6 @@ export VISUAL="nvim"
 eval $(ssh-agent) &>/dev/null
 ssh-add ~/.ssh/github &>/dev/null
 ssh-add ~/.ssh/saloodo &>/dev/null
-
-# nvm
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # bun completions
 [ -s "/home/adam/.bun/_bun" ] && source "/home/adam/.bun/_bun"
