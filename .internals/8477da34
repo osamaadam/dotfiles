@@ -1,0 +1,3 @@
+backup_dir: /home/adam/.config/cfgrr
+ignore_file: .cfgrrignore
+map_file: cfgrrmap.yaml

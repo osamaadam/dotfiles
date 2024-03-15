@@ -82,6 +82,10 @@
     path: .gitconfig-work
     perm: 420
     browsable: true
+8477da34:
+    path: .cfgrr.yaml
+    perm: 420
+    browsable: true
 50702f82:
     path: .config/nvim/lua/remaps.lua
     perm: 420
