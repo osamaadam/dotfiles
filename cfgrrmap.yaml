@@ -126,3 +126,7 @@ e38129ee:
     path: .bash_profile
     perm: 420
     browsable: true
+f765d7f5:
+    path: .profile
+    perm: 420
+    browsable: true
