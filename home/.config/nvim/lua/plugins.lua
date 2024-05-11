@@ -77,7 +77,6 @@ return require("packer").startup({
         require("which-key").setup()
       end,
     })
-
     use({
       "nvim-telescope/telescope.nvim",
       tag = "0.1.1",
@@ -87,7 +86,7 @@ return require("packer").startup({
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate",
     })
-
+    use("sindrets/diffview.nvim")
     -- neo-tree
     use({
       "nvim-neo-tree/neo-tree.nvim",
