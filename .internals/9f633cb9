@@ -1,7 +1,7 @@
 include ./theme.conf
 
 # Font stuff
-font_family Cascadia Code
+font_family CaskaydiaCove NF
 font_size 11.5
 bold_font auto
 italic_font auto
@@ -10,7 +10,7 @@ disable_ligatures cursor
 
 # General display
 cursor_shape block
-background_opacity 0.95
+background_opacity 1
 enable_audio_bell no
 
 # Windows
@@ -33,9 +33,3 @@ map ctrl+shift+up layout_action move_to_screen_edge top
 map ctrl+shift+left layout_action move_to_screen_edge left
 map ctrl+shift+right layout_action move_to_screen_edge right
 map ctrl+shift+down layout_action move_to_screen_edge bottom
-
-# Switch focus to the neighboring window in the indicated direction
-map ctrl+left neighboring_window left
-map ctrl+right neighboring_window right
-map ctrl+up neighboring_window up
-map ctrl+down neighboring_window down

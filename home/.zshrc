@@ -16,7 +16,6 @@ source $ZNAP/znap.zsh # Start Znap
 znap source ohmyzsh/ohmyzsh
 znap source marlonrichert/zsh-autocomplete
 znap source zsh-users/zsh-autosuggestions
-znap source zsh-users/zsh-syntax-highlighting
 znap source laggardkernel/zsh-thefuck
 
 # source $HOME/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
