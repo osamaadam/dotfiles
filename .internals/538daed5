@@ -31,9 +31,9 @@ config.formatting = {
 
     -- set a name for each source
     vim_item.menu = ({
-      nvim_lsp = "[LSP]",
-      nvim_lua = "[Lua]",
-      buffer = "[Buffer]",
+      nvim_lsp = "󰆧",
+      nvim_lua = "",
+      buffer = "",
     })[entry.source.name]
     return vim_item
   end,
