@@ -1,28 +1,45 @@
 -- LSP config
-local lsp = require("lsp-zero").preset({
-  name = "recommended",
-  set_lsp_keymaps = {
-    preserve_mappings = false,
-    omit = { "<C-k>" },
+local lsp = require("lsp-zero")
+
+lsp.on_attach(function(client, bufnr)
+  -- see :help lsp-zero-keybindings
+  -- to learn the available actions
+  lsp.default_keymaps({ buffer = bufnr })
+end)
+
+lsp.set_sign_icons({
+  error = "✘",
+  warn = "▲",
+  hint = "⚑",
+  info = "",
+})
+
+require("mason").setup({})
+require("mason-lspconfig").setup({
+  ensure_installed = { "tsserver", "eslint" },
+  handlers = {
+    -- this first function is the "default handler"
+    -- it applies to every language server without a "custom handler"
+    function(server_name)
+      require("lspconfig")[server_name].setup({})
+    end,
   },
 })
-
-lsp.ensure_installed({
-  "tsserver",
-  "eslint",
-})
-
-vim.keymap.set("n", "<leader>le", ":EslintFixAll<CR>", { desc = "Eslint fix", silent = true })
-
-lsp.nvim_workspace()
-
-lsp.setup()
 
 -- cmp config
 
 local cmp = require("cmp")
+require("luasnip.loaders.from_vscode").lazy_load()
 
 local config = cmp.get_config()
+
+config.sources = {
+  { name = "path" },
+  { name = "nvim_lsp" },
+  { name = "nvim_lua" },
+  { name = "buffer", keyword_length = 3 },
+  { name = "luasnip", keyword_length = 2 },
+}
 
 config.formatting = {
   format = function(entry, vim_item)
@@ -69,8 +86,14 @@ cmp.setup(config)
 -- diagnostics config
 vim.diagnostic.config({
   virtual_text = false,
-  signs = true,
-  update_in_insert = true,
+  severity_sort = true,
+  float = {
+    style = "minimal",
+    border = "rounded",
+    source = "always",
+    scope = "cursor",
+    header = "",
+  },
 })
 
 -- toggle virtual_text on <leader>t
@@ -85,9 +108,13 @@ end
 vim.keymap.set("n", "<leader>lt", toggle_virtual_text, { desc = "Toggle virtual text" })
 vim.keymap.set("n", "<leader>ls", vim.lsp.buf.hover, { desc = "Show hover" })
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Code action" })
+vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Show diagnostics" })
+vim.keymap.set("n", "<leader>le", ":EslintFixAll<CR>", { desc = "Eslint fix", silent = true })
 
 local organize_imports = function()
   vim.lsp.buf.execute_command({ command = "_typescript.organizeImports", arguments = { vim.fn.expand("%:p") } })
 end
 
 vim.keymap.set({ "n", "v" }, "<leader>li", organize_imports, { desc = "Organize imports (tsserver)" })
+
+lsp.setup()
