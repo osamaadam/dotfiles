@@ -58,6 +58,10 @@
     path: .config/nvim/lua/config.lua
     perm: 420
     browsable: true
+261aff5b:
+    path: .config/nvim/after/plugin/noice.lua
+    perm: 420
+    browsable: true
 284f5ccc:
     path: .config/kitty/theme.conf
     perm: 436

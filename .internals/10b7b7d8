@@ -145,6 +145,7 @@ return require("packer").startup({
         { "hrsh7th/cmp-nvim-lua" }, -- Optional
         { "hrsh7th/cmp-buffer" }, -- Optional
         { "hrsh7th/cmp-path" }, -- Optional
+        { "hrsh7th/cmp-cmdline" }, -- Optional
         { "saadparwaiz1/cmp_luasnip" }, -- Optional
         { "onsails/lspkind.nvim" },
 
