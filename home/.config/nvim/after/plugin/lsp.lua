@@ -4,7 +4,7 @@ local lsp = require("lsp-zero")
 lsp.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
-  lsp.default_keymaps({ buffer = bufnr })
+  lsp.default_keymaps({ buffer = bufnr, preserve_mappings = false })
 end)
 
 lsp.set_sign_icons({
