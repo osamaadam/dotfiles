@@ -56,6 +56,11 @@ config.formatting = {
   end,
 }
 
+config.completion = {
+  completeopt = "menu,menuone,noinsert",
+  keyword_length = 2,
+}
+
 local cmp_action = lsp.cmp_action()
 
 config.mapping = {
