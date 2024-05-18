@@ -42,14 +42,7 @@ return require("packer").startup({
     use({
       "numToStr/Comment.nvim",
       config = function()
-        require("Comment").setup({
-          toggler = {
-            line = "<leader>cc",
-          },
-          opleader = {
-            line = "<leader>cc",
-          },
-        })
+        require("Comment").setup()
       end,
     })
     use({
