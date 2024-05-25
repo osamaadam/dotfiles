@@ -138,3 +138,7 @@ f765d7f5:
     path: .profile
     perm: 420
     browsable: true
+facaf65e:
+    path: .zshenv
+    perm: 436
+    browsable: true

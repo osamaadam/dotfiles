@@ -16,9 +16,7 @@ source $ZNAP/znap.zsh # Start Znap
 znap source ohmyzsh/ohmyzsh
 znap source marlonrichert/zsh-autocomplete
 znap source zsh-users/zsh-autosuggestions
-znap source laggardkernel/zsh-thefuck
-
-# source $HOME/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+znap source zsh-users/zsh-syntax-highlighting &> /dev/null
 
 # `znap eval` caches and runs any kind of command output for you.
 znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'

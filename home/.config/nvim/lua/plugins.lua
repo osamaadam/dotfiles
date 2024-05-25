@@ -147,6 +147,18 @@ return require("packer").startup({
         { "rafamadriz/friendly-snippets" }, -- Optional
       },
     })
+    use({
+      "mikesmithgh/kitty-scrollback.nvim",
+      disable = false,
+      opt = true,
+      cmd = { "KittyScrollbackGenerateKittens", "KittyScrollbackCheckHealth" },
+      event = { "User KittyScrollbackLaunch" },
+      -- tag = '*', -- latest stable version, may have breaking changes if major version changed
+      -- tag = 'v4.0.0', -- pin specific tag
+      config = function()
+        require("kitty-scrollback").setup()
+      end,
+    })
 
     if packer_bootstrap then
       require("packer").sync()
