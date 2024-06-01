@@ -16,16 +16,6 @@ require("telescope").setup({
       "--ignore-file",
       ".gitignore",
     },
-    file_ignore_patterns = {
-      "node_modules/",
-      ".git/",
-      ".cache/",
-      ".vscode/",
-      ".idea/",
-      "dist/",
-      "build/",
-      "vendor/",
-    },
     mappings = {
       n = {
         ["s"] = actions.select_vertical,
@@ -68,3 +58,11 @@ vim.keymap.set("n", "<leader>fgs", builtin.git_status, { noremap = true, silent 
 vim.keymap.set("n", "<leader>fgb", builtin.git_branches, { noremap = true, silent = true, desc = "Show Git branches" })
 vim.keymap.set("n", "<leader>fgc", builtin.git_commits, { noremap = true, silent = true, desc = "Show Git commits" })
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { noremap = true, silent = true, desc = "Grep in files" })
+vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { noremap = true, silent = true, desc = "Show references" })
+vim.keymap.set("n", "<leader>fd", builtin.lsp_definitions, { noremap = true, silent = true, desc = "Show definitions" })
+vim.keymap.set(
+  "n",
+  "<leader>fi",
+  builtin.lsp_implementations,
+  { noremap = true, silent = true, desc = "Show implementations" }
+)

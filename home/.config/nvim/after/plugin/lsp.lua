@@ -36,11 +36,7 @@ cmp.setup.cmdline("/", { sources = { { name = "buffer" } } })
 local config = cmp.get_config()
 
 config.sources = {
-  { name = "path" },
   { name = "nvim_lsp" },
-  { name = "nvim_lua" },
-  { name = "buffer", keyword_length = 3 },
-  { name = "luasnip", keyword_length = 2 },
 }
 
 config.formatting = {
@@ -118,9 +114,6 @@ vim.keymap.set("n", "<leader>ls", vim.lsp.buf.hover, { desc = "Show hover" })
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Code action" })
 vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Show diagnostics" })
 vim.keymap.set("n", "<leader>le", ":EslintFixAll<CR>", { desc = "Eslint fix", silent = true })
-vim.keymap.set("n", "<leader>lr", telescope.lsp_references, { desc = "LSP references" })
-vim.keymap.set("n", "<leader>lf", telescope.lsp_definitions, { desc = "LSP definitions" })
-vim.keymap.set("n", "<leader>li", telescope.lsp_implementations, { desc = "LSP implementations" })
 
 local organize_imports = function()
   vim.lsp.buf.execute_command({ command = "_typescript.organizeImports", arguments = { vim.fn.expand("%:p") } })
