@@ -26,19 +26,6 @@ return require("packer").startup({
     use("folke/todo-comments.nvim")
     use("lukas-reineke/indent-blankline.nvim")
     use("eslint/eslint")
-    use( -- lazy.nvim
-      {
-        "folke/noice.nvim",
-        requires = {
-          -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-          "MunifTanjim/nui.nvim",
-          -- OPTIONAL:
-          --   `nvim-notify` is only needed, if you want to use the notification view.
-          --   If not available, we use `mini` as the fallback
-          "rcarriga/nvim-notify",
-        },
-      }
-    )
     use({
       "numToStr/Comment.nvim",
       config = function()
@@ -146,6 +133,18 @@ return require("packer").startup({
         { "L3MON4D3/LuaSnip" }, -- Required
         { "rafamadriz/friendly-snippets" }, -- Optional
       },
+    })
+    use({
+      "mikesmithgh/kitty-scrollback.nvim",
+      disable = false,
+      opt = true,
+      cmd = { "KittyScrollbackGenerateKittens", "KittyScrollbackCheckHealth" },
+      event = { "User KittyScrollbackLaunch" },
+      -- tag = '*', -- latest stable version, may have breaking changes if major version changed
+      -- tag = 'v4.0.0', -- pin specific tag
+      config = function()
+        require("kitty-scrollback").setup()
+      end,
     })
 
     if packer_bootstrap then

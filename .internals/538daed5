@@ -36,11 +36,7 @@ cmp.setup.cmdline("/", { sources = { { name = "buffer" } } })
 local config = cmp.get_config()
 
 config.sources = {
-  { name = "path" },
   { name = "nvim_lsp" },
-  { name = "nvim_lua" },
-  { name = "buffer", keyword_length = 3 },
-  { name = "luasnip", keyword_length = 2 },
 }
 
 config.formatting = {
@@ -110,6 +106,8 @@ local toggle_virtual_text = function()
     vim.diagnostic.config({ virtual_text = true })
   end
 end
+
+local telescope = require("telescope.builtin")
 
 vim.keymap.set("n", "<leader>lt", toggle_virtual_text, { desc = "Toggle virtual text" })
 vim.keymap.set("n", "<leader>ls", vim.lsp.buf.hover, { desc = "Show hover" })
