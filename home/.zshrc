@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.zsh/ohmyzsh/ohmyzsh"
 export ZNAP="$HOME/.zsh/znap"
+if [[ -f /mnt/c/Program\ Files\ (x86)/Microsoft/Edge/Application/msedge.exe ]]; then
+    export BROWSER=/mnt/c/Program\ Files\ (x86)/Microsoft/Edge/Application/msedge.exe
+fi
 
 # Download Znap, if it's not there yet.
 [[ -f $ZNAP/znap.zsh ]] ||

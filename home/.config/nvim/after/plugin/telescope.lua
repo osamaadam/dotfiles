@@ -30,8 +30,6 @@ require("telescope").setup({
   pickers = {
     find_files = {
       follow = true,
-      hidden = true,
-      no_ignore = true,
     },
     git_status = {
       show_untracked = true,
