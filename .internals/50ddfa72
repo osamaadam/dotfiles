@@ -15,7 +15,7 @@ general {
 }
 
 order += "volume master"
-# order += "battery 0"
+order += "battery 0"
 order += "disk /"
 order += "disk /home"
 order += "cpu_usage"

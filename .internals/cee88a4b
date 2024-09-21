@@ -6,6 +6,10 @@ export ZSH="$HOME/.zsh/ohmyzsh/ohmyzsh"
 export ZNAP="$HOME/.zsh/znap"
 if [[ -f /mnt/c/Program\ Files\ (x86)/Microsoft/Edge/Application/msedge.exe ]]; then
     export BROWSER=/mnt/c/Program\ Files\ (x86)/Microsoft/Edge/Application/msedge.exe
+elif [[ -f /usr/bin/google-chrome-stable ]]; then
+    export BROWSER=/usr/bin/google-chrome-stable
+elif [[ -f /usr/bin/firefox ]]; then
+    export BROWSER=/usr/bin/firefox
 fi
 
 # Download Znap, if it's not there yet.
