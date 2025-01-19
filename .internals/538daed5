@@ -16,7 +16,6 @@ lsp.set_sign_icons({
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-  ensure_installed = { "tsserver", "eslint" },
   handlers = {
     -- this first function is the "default handler"
     -- it applies to every language server without a "custom handler"

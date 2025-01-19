@@ -23,7 +23,6 @@ source $ZNAP/znap.zsh # Start Znap
 znap source ohmyzsh/ohmyzsh
 znap source marlonrichert/zsh-autocomplete
 znap source zsh-users/zsh-autosuggestions
-znap source zsh-users/zsh-syntax-highlighting &> /dev/null
 
 # `znap eval` caches and runs any kind of command output for you.
 znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
@@ -41,6 +40,9 @@ eval $(ssh-agent) &>/dev/null
 if [ -f "$HOME/.ssh/github" ]; then
     ssh-add $HOME/.ssh/github &>/dev/null
 fi
-if [ -f "$HOME/.ssh/saloodo" ]; then
-    ssh-add ~/.ssh/saloodo &>/dev/null
-fi
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/home/adam/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/adam/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"

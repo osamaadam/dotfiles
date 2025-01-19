@@ -4,6 +4,7 @@
 	signingkey = ~/.ssh/git_sign_key.pub
 [core]
 	editor = nvim
+	excludesfile = /home/adam/.gitignore_global
 [gpg]
 	format = ssh
 [commit]
@@ -20,3 +21,5 @@
 
 [pull]
 	rebase = true
+[init]
+	defaultBranch = main
