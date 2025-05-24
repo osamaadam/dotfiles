@@ -29,6 +29,9 @@ local opts = {
   cursorline = true,
   -- timoutlen for keymaps
   timeoutlen = 1000,
+  -- End of line opts
+  fixendofline = true,
+  eol = true,
 }
 
 for k, v in pairs(opts) do

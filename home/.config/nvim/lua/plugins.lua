@@ -90,24 +90,7 @@ return require("packer").startup({
     })
 
     -- Copilot
-    use({
-      "zbirenbaum/copilot.lua",
-      cmd = "Copilot",
-      event = "InsertEnter",
-      config = function()
-        require("copilot").setup({
-          suggestion = {
-            auto_trigger = true,
-            keymap = {
-              accept = "<C-w>",
-            },
-          },
-          filetypes = {
-            ["*"] = true,
-          },
-        })
-      end,
-    })
+    use({ "github/copilot.vim" })
 
     -- LSP stuff
     use({
@@ -140,8 +123,6 @@ return require("packer").startup({
       opt = true,
       cmd = { "KittyScrollbackGenerateKittens", "KittyScrollbackCheckHealth" },
       event = { "User KittyScrollbackLaunch" },
-      -- tag = '*', -- latest stable version, may have breaking changes if major version changed
-      -- tag = 'v4.0.0', -- pin specific tag
       config = function()
         require("kitty-scrollback").setup()
       end,
